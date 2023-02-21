@@ -12,7 +12,7 @@ import { HeaderContainer, HeaderOptions } from './header.styles';
 function Header() {
   return (
     <HeaderContainer>
-      <DictionaryIcon />
+      <DictionaryIcon height={32} />
       <HeaderOptions>
         <FontSwitch />
         <SeparatorLine />
