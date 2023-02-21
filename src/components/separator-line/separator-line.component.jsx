@@ -1,5 +1,7 @@
+import { Line } from './separator-line.styles';
+
 function SeparatorLine() {
-  return <div className="vertical-line" />;
+  return <Line />;
 }
 
 export default SeparatorLine;

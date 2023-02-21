@@ -6,16 +6,19 @@ import DarkMode from '../dark-mode/dark-mode.component';
 // svg import
 import { ReactComponent as DictionaryIcon } from '../../assets/images/logo.svg';
 
+// styles import
+import { HeaderContainer, HeaderOptions } from './header.styles';
+
 function Header() {
   return (
-    <header>
+    <HeaderContainer>
       <DictionaryIcon />
-      <div className="header-options">
+      <HeaderOptions>
         <FontSwitch />
         <SeparatorLine />
         <DarkMode />
-      </div>
-    </header>
+      </HeaderOptions>
+    </HeaderContainer>
   );
 }
 

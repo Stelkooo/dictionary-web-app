@@ -1,16 +1,35 @@
-import { ReactComponent as MoonIcon } from '../../assets/images/icon-moon.svg';
+import { useState } from 'react';
+
+// styles import
+import {
+  DarkModeContainer,
+  Switch,
+  Slider,
+  Checkbox,
+  MoonIcon,
+} from './dark-mode.styles';
 
 function DarkMode() {
+  const [checked, setChecked] = useState(false);
+
+  const handleChecked = () => {
+    setChecked(!checked);
+  };
+
   return (
-    <div className="dark-mode">
-      <div>
-        <label className="switch" htmlFor="checkbox">
-          <input type="checkbox" id="checkbox" />
-          <div className="slider round" />
-        </label>
-      </div>
-      <MoonIcon />
-    </div>
+    <DarkModeContainer>
+      <Switch htmlFor="checkbox">
+        <Checkbox
+          type="checkbox"
+          id="checkbox"
+          checked={checked}
+          onChange={handleChecked}
+        />
+        <Slider />
+      </Switch>
+      {/* chnage moon stroke color based on the checkbox checked value */}
+      <MoonIcon stroke={checked ? '#a445ed' : '#757575'} />
+    </DarkModeContainer>
   );
 }
 
