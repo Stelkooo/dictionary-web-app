@@ -6,6 +6,9 @@ import { ReactComponent as SearchSvg } from '../../assets/images/icon-search.svg
 export const SearchBarContainer = styled.div`
   margin-bottom: ${24 / 16}rem;
   position: relative;
+  @media screen and (min-width: 768px) {
+    margin-bottom: ${43 / 16}rem;
+  }
 `;
 
 export const SearchBarInput = styled.input`
@@ -23,10 +26,15 @@ export const SearchBarInput = styled.input`
   &:focus {
     border: 1px solid #a445ed;
   }
+  @media screen and (min-width: 768px) {
+    padding: ${24 / 16}rem;
+    height: ${64 / 16}rem;
+    font-size: ${20 / 16}rem;
+  }
 `;
 
 export const SearchIcon = styled(SearchSvg)`
   position: absolute;
-  top: 1rem;
+  top: ${24 / 16}rem;
   right: ${24 / 16}rem;
 `;

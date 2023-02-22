@@ -10,6 +10,10 @@ export const AudioButton = styled.button`
   &:hover {
     cursor: pointer;
   }
+  @media screen and (min-width: 768px) {
+    width: ${75 / 16}rem;
+    height: ${75 / 16}rem;
+  }
 `;
 
 export const AudioIcon = styled(PlaySvg)`
@@ -28,6 +32,10 @@ export const AudioIcon = styled(PlaySvg)`
     & path {
       fill: white;
     }
+  }
+  @media screen and (min-width: 768px) {
+    width: ${75 / 16}rem;
+    height: ${75 / 16}rem;
   }
 `;
 

@@ -4,6 +4,10 @@ export const AntonymsContainer = styled.div`
   display: flex;
   gap: ${24 / 16}rem;
   margin-bottom: ${24 / 16}rem;
+  @media screen and (min-width: 768px) {
+    font-size: ${20 / 16}rem;
+    margin-bottom: ${40 / 16}rem;
+  }
 `;
 
 export const Title = styled.p`

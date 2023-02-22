@@ -4,6 +4,10 @@ import { ReactComponent as NewWindowSvg } from '../../assets/images/icon-new-win
 
 export const SourceContainer = styled.div`
   font-size: ${14 / 16}rem;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: ${20 / 16}rem;
+  }
 `;
 
 export const SourceHeading = styled.p`

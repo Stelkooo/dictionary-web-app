@@ -19,6 +19,9 @@ export const FontSwitchButton = styled.button`
   &:hover {
     cursor: pointer;
   }
+  @media screen and (min-width: 768px) {
+    font-size: ${18 / 16}rem;
+  }
 `;
 
 export const FontList = styled.div`
@@ -51,5 +54,9 @@ export const FontListOption = styled.button`
 
   &:not(:last-child) {
     margin-bottom: 1rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: ${18 / 16}rem;
   }
 `;

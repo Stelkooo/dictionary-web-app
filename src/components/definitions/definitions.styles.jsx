@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export const DefinitionsContainer = styled.div`
   margin-bottom: ${24 / 16}rem;
+  @media screen and (min-width: 768px) {
+    margin-bottom: ${40 / 16}rem;
+  }
 `;
 
 export const DefinitionsList = styled.ul``;
@@ -26,6 +29,9 @@ export const Definition = styled.li`
   }
   &:not(:last-of-type) {
     margin-bottom: ${13 / 16}rem;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: ${18 / 16}rem;
   }
 `;
 
