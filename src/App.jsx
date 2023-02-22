@@ -10,17 +10,18 @@ import { selectFontFamily } from './store/font/font.selector';
 
 // import styles
 import { GlobalStyle } from './Global.styles';
+import { AppContainer } from './App.styles';
 
 function App() {
   const fontFamily = useSelector(selectFontFamily);
 
   return (
-    <div className="App">
+    <AppContainer>
       <GlobalStyle fontFamily={fontFamily} />
       <Header />
       <SearchBar />
       <Main />
-    </div>
+    </AppContainer>
   );
 }
 
