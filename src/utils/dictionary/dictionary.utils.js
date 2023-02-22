@@ -1,6 +1,6 @@
 const dictionaryApiPath = 'https://api.dictionaryapi.dev/api/v2/entries/en';
 
-export const fetchDictApi = async (word = 'keyboard') => {
+export const fetchDictApi = async (word) => {
   const urlToFetch = `${dictionaryApiPath}/${word}`;
   const response = await fetch(urlToFetch)
     .then((res) => res.json())
