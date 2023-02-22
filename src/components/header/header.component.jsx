@@ -15,7 +15,7 @@ function Header() {
       <DictionaryIcon height={32} />
       <HeaderOptions>
         <FontSwitch />
-        <SeparatorLine />
+        <SeparatorLine isVertical />
         <DarkMode />
       </HeaderOptions>
     </HeaderContainer>

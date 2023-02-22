@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
   padding: ${24 / 16}rem;
+  color: #2d2d2d;
 }
 `;
 

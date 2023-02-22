@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
 // word actions
@@ -9,16 +9,15 @@ import { fetchDictApi } from '../../utils/dictionary/dictionary.utils';
 
 // component import
 import Word from '../word/word.component';
+import Meanings from '../meanings/meanings.component';
+import Source from '../source/source.component';
 
 function Main() {
   const dispatch = useDispatch();
 
-  const [json, setJson] = useState({});
-
   useEffect(() => {
     const fetchData = async () => {
       const wordObj = await fetchDictApi();
-      setJson(wordObj);
       dispatch(setWord(wordObj));
     };
     fetchData();
@@ -27,7 +26,8 @@ function Main() {
   return (
     <div>
       <Word />
-      {JSON.stringify(json)}
+      <Meanings />
+      <Source />
     </div>
   );
 }

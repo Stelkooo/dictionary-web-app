@@ -23,3 +23,13 @@ export const selectAudioUrl = createSelector([selectWordReducer], (word) => {
   const audio = new Audio(validArr?.audio);
   return audio || null;
 });
+
+export const selectMeanings = createSelector(
+  [selectWordReducer],
+  (word) => word.meanings
+);
+
+export const selectSourceUrls = createSelector(
+  [selectWordReducer],
+  (word) => word.sourceUrls
+);
