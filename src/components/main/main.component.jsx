@@ -7,6 +7,9 @@ import { setWord } from '../../store/word/word.reducer';
 // fetch data
 import { fetchDictApi } from '../../utils/dictionary/dictionary.utils';
 
+// component import
+import Word from '../word/word.component';
+
 function Main() {
   const dispatch = useDispatch();
 
@@ -21,7 +24,12 @@ function Main() {
     fetchData();
   }, [dispatch]);
 
-  return <div>{JSON.stringify(json)}</div>;
+  return (
+    <div>
+      <Word />
+      {JSON.stringify(json)}
+    </div>
+  );
 }
 
 export default Main;

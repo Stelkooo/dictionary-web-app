@@ -7,4 +7,7 @@ export const selectWord = createSelector(
   (word) => word.word
 );
 
-export default selectWord;
+export const selectPhonetic = createSelector(
+  [selectWordReducer],
+  (word) => word.phonetic
+);
