@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 // components imports
 import Header from './components/header/header.component';
 import SearchBar from './components/search-bar/search-bar.component';
+import Main from './components/main/main.component';
 
 // font selector
 import { selectFontFamily } from './store/font/font.selector';
@@ -18,6 +19,7 @@ function App() {
       <GlobalStyle fontFamily={fontFamily} />
       <Header />
       <SearchBar />
+      <Main />
     </div>
   );
 }

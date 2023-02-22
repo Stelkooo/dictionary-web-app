@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { ReactComponent as SearchSvg } from '../../assets/images/icon-search.svg';
 
 export const SearchBarContainer = styled.div`
+  margin-bottom: ${24 / 16}rem;
   position: relative;
 `;
 
