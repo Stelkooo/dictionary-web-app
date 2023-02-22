@@ -36,9 +36,9 @@ function PartOfSpeech({
 PartOfSpeech.propTypes = {
   meaning: PropTypes.shape({
     partOfSpeech: PropTypes.string.isRequired,
-    definitions: PropTypes.arrayOf([]).isRequired,
-    synonyms: PropTypes.arrayOf([]).isRequired,
-    antonyms: PropTypes.arrayOf([]).isRequired,
+    definitions: PropTypes.arrayOf(PropTypes.object).isRequired,
+    synonyms: PropTypes.arrayOf(PropTypes.string).isRequired,
+    antonyms: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
 };
 
