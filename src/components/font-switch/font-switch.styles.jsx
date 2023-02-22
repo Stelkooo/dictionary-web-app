@@ -22,12 +22,13 @@ export const FontSwitchButton = styled.button`
 `;
 
 export const FontList = styled.div`
+  background-color: white;
   display: ${(props) => props.display};
   flex-direction: column;
   width: ${183 / 16}rem;
   border-radius: 1rem;
   position: absolute;
-  z-index: -1;
+  z-index: 100;
   padding: 24px;
   right: 1rem;
   top: 2rem;

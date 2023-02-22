@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
+  margin-bottom: ${24 / 16}rem;
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem;
 `;
 
 export const HeaderOptions = styled.div`

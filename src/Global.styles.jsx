@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
   margin: 0;
   font-family: ${(props) => props.fontFamily};
 }
+
+body {
+  padding: ${24 / 16}rem;
+}
 `;
 
 export default GlobalStyle;
