@@ -4,6 +4,7 @@ export const WordContainer = styled.div`
   margin-bottom: ${32 / 16}rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const WordPhoneticsContainer = styled.div``;

@@ -3,6 +3,9 @@ import { useSelector } from 'react-redux';
 // word selector
 import { selectWord, selectPhonetic } from '../../store/word/word.selector';
 
+// component import
+import Audio from '../audio/audio.component';
+
 // import style
 import {
   WordContainer,
@@ -13,7 +16,7 @@ import {
 
 function Word() {
   const word = useSelector(selectWord);
-  const phonetic = useSelector(selectPhonetic);
+  const phonetic = useSelector(selectPhonetic) || null;
 
   return (
     <WordContainer>
@@ -21,9 +24,7 @@ function Word() {
         <WordName>{word}</WordName>
         <Phonetic>{phonetic}</Phonetic>
       </WordPhoneticsContainer>
-      <div className="audio-container">
-        <p>audio</p>
-      </div>
+      <Audio />
     </WordContainer>
   );
 }
