@@ -3,9 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 
 // word actions
 import { setWord } from '../../store/word/word.reducer';
+import { setHasUserSearched } from '../../store/search/search.reducer';
 
 // selectors
-import { selectSearchQuery } from '../../store/search/search.selector';
+import {
+  selectSearchQuery,
+  selectHasUserSearched,
+} from '../../store/search/search.selector';
 import { selectWord } from '../../store/word/word.selector';
 
 // fetch data
@@ -35,8 +39,12 @@ function useDebounceValue(value) {
 
 function Main() {
   const dispatch = useDispatch();
+
   const searchQuery = useSelector(selectSearchQuery);
+  const hasUserSearched = useSelector(selectHasUserSearched);
+
   const word = useSelector(selectWord);
+
   const debounceValue = useDebounceValue(searchQuery);
 
   useEffect(() => {
@@ -48,20 +56,25 @@ function Main() {
         } else {
           dispatch(setWord({}));
         }
+        if (hasUserSearched === false) {
+          dispatch(setHasUserSearched(true));
+        }
       };
       fetchData();
     }
-  }, [dispatch, debounceValue]);
+  }, [dispatch, debounceValue, hasUserSearched]);
 
-  return word ? (
-    <div>
-      <Word />
-      <Meanings />
-      <Source />
-    </div>
-  ) : (
-    <NotFound />
-  );
+  if (word) {
+    return (
+      <div>
+        <Word />
+        <Meanings />
+        <Source />
+      </div>
+    );
+  }
+  if (!word && hasUserSearched) return <NotFound />;
+  return null;
 }
 
 export default Main;

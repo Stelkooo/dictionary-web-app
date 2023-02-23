@@ -7,4 +7,7 @@ export const selectSearchQuery = createSelector(
   (search) => search.searchQuery
 );
 
-export default selectSearchQuery;
+export const selectHasUserSearched = createSelector(
+  [selectSearchReducer],
+  (search) => search.hasUserSearched
+);

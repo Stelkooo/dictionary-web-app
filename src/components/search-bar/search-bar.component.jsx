@@ -18,13 +18,17 @@ function SearchBar() {
 
   const searchValue = useSelector(selectSearchQuery);
 
+  const onChangeHandler = (value) => {
+    dispatch(setSearch(value));
+  };
+
   return (
     <SearchBarContainer>
       <SearchBarInput
         type="text"
         placeholder="Search for any word..."
         value={searchValue}
-        onChange={(e) => dispatch(setSearch(e.currentTarget.value))}
+        onChange={(e) => onChangeHandler(e.currentTarget.value)}
       />
       <SearchIcon />
     </SearchBarContainer>
