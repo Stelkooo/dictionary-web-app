@@ -33,10 +33,12 @@ export const light = {
   background: base.colours.white,
   searchBar: base.colours.black100,
   font: base.colours.black500,
+  boxShadow: 'rgba(0, 0, 0, 10%)',
 };
 
 export const dark = {
   background: base.colours.black700,
   searchBar: base.colours.black600,
   font: base.colours.white,
+  boxShadow: 'rgba(255, 255, 255, 10%)',
 };

@@ -25,7 +25,7 @@ export const FontSwitchButton = styled.button`
 `;
 
 export const FontList = styled.div`
-  background-color: ${({ theme }) => theme.colours.white};
+  background-color: ${({ theme }) => theme.theme.background};
   display: ${(props) => props.display};
   flex-direction: column;
   width: ${183 / 16}rem;
@@ -35,7 +35,7 @@ export const FontList = styled.div`
   padding: 24px;
   right: 1rem;
   top: 2rem;
-  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 10%);
+  box-shadow: 0px 5px 30px 0px ${({ theme }) => theme.theme.boxShadow};
 `;
 
 export const FontListOption = styled.button`
