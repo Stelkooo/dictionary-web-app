@@ -20,11 +20,11 @@ function Audio() {
     setAudioPlaying(false);
   };
 
-  return (
+  return audio ? (
     <AudioButton type="button" onClick={() => handleAudio()}>
       <AudioIcon $audioPlaying={audioPlaying} />
     </AudioButton>
-  );
+  ) : null;
 }
 
 export default Audio;

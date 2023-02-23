@@ -1,7 +1,11 @@
 import { useSelector } from 'react-redux';
 
 // word selector
-import { selectWord, selectPhonetic } from '../../store/word/word.selector';
+import {
+  selectWord,
+  selectPhonetic,
+  selectAudioUrl,
+} from '../../store/word/word.selector';
 
 // component import
 import Audio from '../audio/audio.component';
@@ -16,15 +20,16 @@ import {
 
 function Word() {
   const word = useSelector(selectWord);
-  const phonetic = useSelector(selectPhonetic) || null;
+  const phonetic = useSelector(selectPhonetic);
+  const audio = useSelector(selectAudioUrl);
 
   return (
     <WordContainer>
       <WordPhoneticsContainer>
         <WordName>{word}</WordName>
-        <Phonetic>{phonetic}</Phonetic>
+        {phonetic && <Phonetic>{phonetic}</Phonetic>}
       </WordPhoneticsContainer>
-      <Audio />
+      {audio && <Audio />}
     </WordContainer>
   );
 }
