@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 // import actions
@@ -22,6 +23,13 @@ function DarkMode() {
   const handleChecked = () => {
     dispatch(setIsDarkMode(!isDarkMode));
   };
+
+  useEffect(() => {
+    const prefersDark = window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    ).matches;
+    if (prefersDark) dispatch(setIsDarkMode(true));
+  }, [dispatch]);
 
   return (
     <DarkModeContainer>
