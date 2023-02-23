@@ -3,8 +3,7 @@ import { PropTypes } from 'prop-types';
 // component import
 import SeparatorLine from '../separator-line/separator-line.component';
 import Definitions from '../definitions/definitions.component';
-import Synonyms from '../synonyms/synonyms.component';
-import Antonyms from '../antonyms/antonyms.component';
+import SynonymsAntonyms from '../SynonymsAntonyms/synonymsantonyms.component';
 
 // style import
 import {
@@ -26,8 +25,12 @@ function PartOfSpeech({
       <Meaning>
         <p>Meaning</p>
         <Definitions definitions={definitions} />
-        {synonyms.length ? <Synonyms synonyms={synonyms} /> : null}
-        {antonyms.length ? <Antonyms antonyms={antonyms} /> : null}
+        {synonyms.length ? (
+          <SynonymsAntonyms array={synonyms} title="Synonyms" />
+        ) : null}
+        {antonyms.length ? (
+          <SynonymsAntonyms array={antonyms} title="Antonyms" />
+        ) : null}
       </Meaning>
     </PartOfSpeechContainer>
   );
