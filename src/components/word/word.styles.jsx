@@ -16,7 +16,6 @@ export const WordName = styled.h2`
   margin-bottom: ${8 / 16}rem;
   font-weight: 700;
   font-size: ${32 / 16}rem;
-  color: #2d2d2d;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: ${({ theme }) => theme.fontSizes.headingLarge};

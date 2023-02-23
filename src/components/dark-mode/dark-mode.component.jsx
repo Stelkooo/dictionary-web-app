@@ -1,4 +1,10 @@
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+// import actions
+import { setIsDarkMode } from '../../store/dark-mode/dark-mode.reducer';
+
+// import selector
+import { selectIsDarkMode } from '../../store/dark-mode/dark-mode.selector';
 
 // styles import
 import {
@@ -10,10 +16,11 @@ import {
 } from './dark-mode.styles';
 
 function DarkMode() {
-  const [checked, setChecked] = useState(false);
+  const dispatch = useDispatch();
+  const isDarkMode = useSelector(selectIsDarkMode);
 
   const handleChecked = () => {
-    setChecked(!checked);
+    dispatch(setIsDarkMode(!isDarkMode));
   };
 
   return (
@@ -22,13 +29,13 @@ function DarkMode() {
         <Checkbox
           type="checkbox"
           id="checkbox"
-          checked={checked}
+          checked={isDarkMode}
           onChange={handleChecked}
         />
         <Slider />
       </Switch>
       {/* chnage moon stroke color based on the checkbox checked value */}
-      <MoonIcon stroke={checked ? '#a445ed' : '#757575'} />
+      <MoonIcon stroke={isDarkMode ? '#a445ed' : '#757575'} />
     </DarkModeContainer>
   );
 }

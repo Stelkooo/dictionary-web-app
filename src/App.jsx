@@ -11,6 +11,7 @@ import Main from './components/main/main.component';
 
 // font selector
 import { selectFontFamily } from './store/font/font.selector';
+import { selectIsDarkMode } from './store/dark-mode/dark-mode.selector';
 
 // import styles
 import { GlobalStyle } from './Global.styles';
@@ -18,13 +19,14 @@ import { AppContainer } from './App.styles';
 
 function App() {
   const fontFamily = useSelector(selectFontFamily);
+  const isDarkMode = useSelector(selectIsDarkMode);
 
   const themesMap = {
     light,
     dark,
   };
 
-  const theme = { ...base, theme: themesMap.light };
+  const theme = { ...base, theme: themesMap[isDarkMode ? 'dark' : 'light'] };
 
   return (
     <ThemeProvider theme={theme}>
