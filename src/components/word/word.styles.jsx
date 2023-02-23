@@ -5,7 +5,7 @@ export const WordContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     margin-bottom: ${40 / 16}rem;
   }
 `;
@@ -18,16 +18,16 @@ export const WordName = styled.h2`
   font-size: ${32 / 16}rem;
   color: #2d2d2d;
 
-  @media screen and (min-width: 768px) {
-    font-size: ${64 / 16}rem;
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: ${({ theme }) => theme.fontSizes.headingLarge};
   }
 `;
 
 export const Phonetic = styled.h3`
   font-weight: 400;
-  font-size: ${18 / 16}rem;
+  font-size: ${({ theme }) => theme.fontSizes.bodyMedium};
   color: #a445ed;
-  @media screen and (min-width: 768px) {
-    font-size: ${24 / 16}rem;
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: ${({ theme }) => theme.fontSizes.headingMedium};
   }
 `;

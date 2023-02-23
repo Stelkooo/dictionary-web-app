@@ -6,11 +6,12 @@ export const GlobalStyle = createGlobalStyle`
   padding: 0;
   margin: 0;
   font-family: ${(props) => props.fontFamily};
+  color: ${({ theme }) => theme.theme.font};
 }
 
 body {
   padding: ${24 / 16}rem;
-  color: #2d2d2d;
+  background-color: ${({ theme }) => theme.theme.background};
 }
 `;
 

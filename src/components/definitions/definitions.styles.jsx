@@ -25,19 +25,19 @@ export const Definition = styled.li`
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background-color: #a445ed;
+    background-color: ${({ theme }) => theme.colours.purple};
   }
   &:not(:last-of-type) {
     margin-bottom: ${13 / 16}rem;
   }
-  @media screen and (min-width: 768px) {
-    font-size: ${18 / 16}rem;
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: ${({ theme }) => theme.fontSizes.bodyMedium};
   }
 `;
 
 export const Example = styled.span`
   margin-top: ${13 / 16}rem;
-  color: #757575;
+  color: ${({ theme }) => theme.colours.black300};
   &:before {
     content: '“';
   }

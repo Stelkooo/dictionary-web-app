@@ -10,7 +10,7 @@ export const AudioButton = styled.button`
   &:hover {
     cursor: pointer;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: ${75 / 16}rem;
     height: ${75 / 16}rem;
   }
@@ -23,17 +23,20 @@ export const AudioIcon = styled(PlaySvg)`
     opacity: ${(props) => (props.$audioPlaying ? 1 : 0.25)};
   }
   & path {
-    fill: ${(props) => (props.$audioPlaying ? 'white' : '#a445ed')};
+    fill: ${(props) =>
+      props.$audioPlaying
+        ? props.theme.colours.white
+        : props.theme.colours.purple};
   }
   &:hover {
     & circle {
       opacity: 1;
     }
     & path {
-      fill: white;
+      fill: ${({ theme }) => theme.colours.white};
     }
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: ${75 / 16}rem;
     height: ${75 / 16}rem;
   }

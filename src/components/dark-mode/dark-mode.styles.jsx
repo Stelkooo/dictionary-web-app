@@ -20,7 +20,7 @@ export const Switch = styled.label`
 `;
 
 export const Slider = styled.div`
-  background-color: #757575;
+  background-color: ${({ theme }) => theme.colours.black300};
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -31,7 +31,7 @@ export const Slider = styled.div`
   border-radius: 10px;
 
   &:before {
-    background-color: #fff;
+    background-color: ${({ theme }) => theme.colours.white};
     bottom: 3px;
     content: '';
     height: 14px;
@@ -51,7 +51,7 @@ export const MoonIcon = styled(MoonSvg)`
 
 export const Checkbox = styled.input`
   &:checked + ${Slider} {
-    background-color: #a445ed;
+    background-color: ${({ theme }) => theme.colours.purple};
   }
 
   &:checked + ${Slider}:before {

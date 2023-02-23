@@ -5,7 +5,7 @@ export const FontsContainer = styled.div`
 `;
 
 export const FontSwitchButton = styled.button`
-  font-size: ${14 / 16}rem;
+  font-size: ${({ theme }) => theme.fontSizes.bodySmall};
   font-weight: 700;
   outline: none;
   background: transparent;
@@ -19,13 +19,13 @@ export const FontSwitchButton = styled.button`
   &:hover {
     cursor: pointer;
   }
-  @media screen and (min-width: 768px) {
-    font-size: ${18 / 16}rem;
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: ${({ theme }) => theme.fontSizes.bodyMedium};
   }
 `;
 
 export const FontList = styled.div`
-  background-color: white;
+  background-color: ${({ theme }) => theme.colours.white};
   display: ${(props) => props.display};
   flex-direction: column;
   width: ${183 / 16}rem;
@@ -41,7 +41,7 @@ export const FontList = styled.div`
 export const FontListOption = styled.button`
   text-align: start;
   font-family: ${(props) => props.fontOption};
-  font-size: ${14 / 16}rem;
+  font-size: ${({ theme }) => theme.fontSizes.bodySmall};
   font-weight: 700;
   outline: none;
   border: none;
@@ -49,14 +49,14 @@ export const FontListOption = styled.button`
 
   &:hover {
     cursor: pointer;
-    color: #a445ed;
+    color: ${({ theme }) => theme.colours.purple};
   }
 
   &:not(:last-child) {
     margin-bottom: 1rem;
   }
 
-  @media screen and (min-width: 768px) {
-    font-size: ${18 / 16}rem;
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: ${({ theme }) => theme.fontSizes.bodyMedium};
   }
 `;

@@ -1,5 +1,9 @@
 import { useSelector } from 'react-redux';
 
+// theme setup
+import { ThemeProvider } from 'styled-components';
+import { base, light, dark } from './styled/theme.styles';
+
 // components imports
 import Header from './components/header/header.component';
 import SearchBar from './components/search-bar/search-bar.component';
@@ -15,13 +19,22 @@ import { AppContainer } from './App.styles';
 function App() {
   const fontFamily = useSelector(selectFontFamily);
 
+  const themesMap = {
+    light,
+    dark,
+  };
+
+  const theme = { ...base, theme: themesMap.light };
+
   return (
-    <AppContainer>
-      <GlobalStyle fontFamily={fontFamily} />
-      <Header />
-      <SearchBar />
-      <Main />
-    </AppContainer>
+    <ThemeProvider theme={theme}>
+      <AppContainer>
+        <GlobalStyle fontFamily={fontFamily} />
+        <Header />
+        <SearchBar />
+        <Main />
+      </AppContainer>
+    </ThemeProvider>
   );
 }
 

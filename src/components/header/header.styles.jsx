@@ -4,7 +4,7 @@ export const HeaderContainer = styled.div`
   margin-bottom: ${24 / 16}rem;
   display: flex;
   justify-content: space-between;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     margin-bottom: ${54 / 16}rem;
   }
 `;

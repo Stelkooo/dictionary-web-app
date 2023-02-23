@@ -6,7 +6,7 @@ import { ReactComponent as SearchSvg } from '../../assets/images/icon-search.svg
 export const SearchBarContainer = styled.div`
   margin-bottom: ${24 / 16}rem;
   position: relative;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     margin-bottom: ${43 / 16}rem;
   }
 `;
@@ -17,19 +17,19 @@ export const SearchBarInput = styled.input`
   width: 100%;
   height: ${48 / 16}rem;
   border-radius: 1rem;
-  background-color: #f4f4f4;
+  background-color: ${({ theme }) => theme.theme.searchBar};
   border: none;
   outline: none;
   font-weight: 700;
-  caret-color: #a445ed;
+  caret-color: ${({ theme }) => theme.colours.purple};
 
   &:focus {
-    border: 1px solid #a445ed;
+    border: 1px solid ${({ theme }) => theme.colours.purple};
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: ${24 / 16}rem;
     height: ${64 / 16}rem;
-    font-size: ${20 / 16}rem;
+    font-size: ${({ theme }) => theme.fontSizes.headingSmall};
   }
 `;
 
