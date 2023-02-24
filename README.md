@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](.\public\assets\images\screenshot.png)
+![](https://github.com/Stelkooo/dictionary-web-app/blob/main/public/assets/images/screenshot.png)
 
 ### Links
 
