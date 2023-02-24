@@ -15,7 +15,7 @@ body {
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: ${58 / 16}rem ${24 / 16}rem;
   }
-  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     padding: ${58 / 16}rem 0;
   }
 }
