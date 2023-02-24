@@ -12,6 +12,12 @@ export const GlobalStyle = createGlobalStyle`
 body {
   padding: ${24 / 16}rem;
   background-color: ${({ theme }) => theme.theme.background};
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: ${58 / 16}rem ${24 / 16}rem;
+  }
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: ${58 / 16}rem;
+  }
 }
 `;
 
