@@ -12,7 +12,7 @@ export const WordContainer = styled.div`
 
 export const WordPhoneticsContainer = styled.div``;
 
-export const WordName = styled.h2`
+export const WordName = styled.h1`
   margin-bottom: ${8 / 16}rem;
   font-weight: 700;
   font-size: ${32 / 16}rem;

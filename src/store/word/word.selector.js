@@ -12,7 +12,6 @@ export const selectPhonetic = createSelector([selectWordReducer], (word) => {
   const validArr = word.phonetics.filter(
     (obj) => obj.audio && obj.sourceUrl
   )[0];
-  console.log(validArr?.text);
   return validArr?.text;
 });
 

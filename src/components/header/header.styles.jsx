@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.header`
   margin-bottom: ${24 / 16}rem;
   display: flex;
   justify-content: space-between;

@@ -66,11 +66,11 @@ function Main() {
 
   if (word) {
     return (
-      <div>
+      <main>
         <Word />
         <Meanings />
         <Source />
-      </div>
+      </main>
     );
   }
   if (!word && hasUserSearched) return <NotFound />;
