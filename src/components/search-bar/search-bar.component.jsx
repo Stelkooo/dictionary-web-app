@@ -24,7 +24,7 @@ function SearchBar() {
   const hasUserSearched = useSelector(selectHasUserSearched);
 
   const onChangeHandler = (value) => {
-    dispatch(setSearch(value));
+    dispatch(setSearch(value.toLowerCase()));
   };
 
   return (

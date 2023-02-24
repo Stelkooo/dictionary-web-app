@@ -40,8 +40,11 @@ export const SearchBarInput = styled.input`
 
 export const SearchIcon = styled(SearchSvg)`
   position: absolute;
-  top: ${24 / 16}rem;
+  top: ${15 / 16}rem;
   right: ${24 / 16}rem;
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    top: ${24 / 16}rem;
+  }
 `;
 
 export const Error = styled.p`
