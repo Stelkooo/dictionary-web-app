@@ -25,7 +25,8 @@ function Definitions({ definitions }) {
 }
 
 Definitions.propTypes = {
-  definitions: PropTypes.arrayOf(PropTypes.object).isRequired,
+  definitions: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string))
+    .isRequired,
 };
 
 export default Definitions;
